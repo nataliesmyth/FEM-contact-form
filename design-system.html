@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@200..800&display=swap" rel="stylesheet">
+  <title>Contact Form Design System</title>
+</head>
+<body>
+  <h1>Style Guide</h1>
+  <main>
+    <section class="Colors">
+      <h2 class="text-green">Colors</h2>
+
+      <div class="flex">
+        <div style="flex-grow: 1">
+          <div class="bg-dark-grey" style="width: 90%; height: 125px; border-radius: 10px;"></div>
+          <h3>Grey 900</h3>
+          <p class="text-dark-grey"><span class="uppercase text-light-grey">hex</span>#2A4144</p>
+          <p class="text-dark-grey"><span class="uppercase text-light-grey">rgb</span>42, 65, 68</p>
+          <p class="text-dark-grey"><span class="uppercase text-light-grey">hsl</span>187°, 24%, 22%</p>
+        </div>
+        
+        <div style="flex-grow: 1">
+          <div class="bg-light-grey" style="width: 90%; height: 125px; border-radius: 10px;"></div>
+          <h3>Grey 500</h3>
+          <p><span class="uppercase text-light-grey">hex</span>#86A2A5</p>
+          <p><span class="uppercase text-light-grey">rgb</span>134, 162, 165</p>
+          <p><span class="uppercase text-light-grey">hsl</span>186°, 15%, 59%</p>
+        </div>
+        
+        <div style="flex-grow: 1">
+          <div class="bg-white bg-white-border" style="width: 90%; height: 125px; border-radius: 10px;"></div>
+          <h3>White</h3>
+          <p><span class="uppercase text-light-grey">hex</span>#FFFFFF</p>
+          <p><span class="uppercase text-light-grey">rgb</span>255,255,255</p>
+            <p><span class="uppercase text-light-grey">hsl</span>0°, 0%, 100%</p>
+        </div>
+      </div>
+      
+      <div class="flex">
+        <div style="flex-grow: 1">
+          <div class="bg-primary-dark" style="width: 90%; height: 125px; border-radius: 10px;"></div>
+          <h3>Green 600</h3>
+          <p><span class="uppercase text-light-grey">hex</span>#0C7D69</p>
+          <p><span class="uppercase text-light-grey">rgb</span>12, 125, 105</p>
+          <p><span class="uppercase text-light-grey">hsl</span>169°, 82%, 27%</p>
+        </div>
+      
+        <div style="flex-grow: 1">
+          <div class="bg-primary-light" style="width: 90%; height: 125px; border-radius: 10px;"></div>
+          <h3>Green 200</h3>
+          <p><span class="uppercase text-light-grey">hex</span>#E0F1E8</p>
+          <p><span class="uppercase text-light-grey">rgb</span>224, 241, 232</p>
+          <p><span class="uppercase text-light-grey">hsl</span>148°, 38%, 91%</p>
+        </div>
+      
+        <div style="flex-grow: 1">
+          <div class="bg-secondary" style="width: 90%; height: 125px; border-radius: 10px;"></div>
+          <h3>Red (Errors)</h3>
+          <p><span class="uppercase text-light-grey">hex</span>#D73C3C</p>
+          <p><span class="uppercase text-light-grey">rgb</span>215, 60, 60</p>
+          <p><span class="uppercase text-light-grey">hsl</span>0°, 66%, 54%</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="Typography">
+      <h2 class="text-green">Typography</h2>
+      <div class="flex">
+        <div class="flow" style="flex-basis: 100%; --flow-space: 1rem;">
+          <p><span class="text-green">Heading</span> Karla Bold</p>
+          <p class="text-dark-grey">32px 100% Line Height -1px Letter Spacing</p>
+          <div class="line"></div>
+          <p class="text-dark-grey fs-heading">Lorem ipsum dolor sit amet consectetuer adipiscing</p>
+        </div>
+      
+        <div class="flow" style="flex-basis: 100%; --flow-space: 1rem;">
+          <p class="text-dark-grey"><span class="text-green">Body MD (Bold)</span> Karla Bold</p>
+          <p class="text-dark-grey">18px 150% Line Height 0px Letter Spacing</p>
+          <div class="line"></div>
+          <p class="text-dark-grey fs-body fw-bold">Lorem ipsum dolor sit amet consectetuer adipiscing</p>
+          <p class="text-dark-grey"><span class="text-green">Body MD (Regular)</span> Karla Bold</p>
+          <p class="text-dark-grey">18px 150% Line Height 0px Letter Spacing</p>
+          <div class="line"></div>
+          <p class="text-dark-grey fs-body fw-reg">Lorem ipsum dolor sit amet consectetuer adipiscing</p>
+          <p class="text-dark-grey"><span class="text-green">Body SM</span> Karla Bold</p>
+          <p class="text-dark-grey">16px 150% Line Height 0px Letter Spacing</p>
+          <div class="line"></div>
+          <p class="text-dark-grey fs-small fw-reg">Lorem ipsum dolor sit amet consectetuer adipiscing</p>
+        </div>
+      </div>
+    </section>
+    <section class="Spacing">
+      <h2 class="text-green">Spacing</h2>
+      <div class="flex" style="justify-content: space-between;">
+        <div class="spacing-container">
+          <p class="text-green fs-body fw-bold">1600    <span class="text-dark-grey fs-small fw-reg">128px</span></p>
+          <div class="spacing bg-light-grey sp-1600" style="height: 42px;"></div>
+        </div>
+        <div class="spacing-container">
+          <p class="text-green fs-body fw-bold">500   <span class="text-dark-grey fs-small fw-reg">40px</span></p>
+          <div class="spacing bg-light-grey sp-500" style="height: 42px;"></div>
+        </div>
+        <div class="spacing-container">
+          <p class="text-green fs-body fw-bold">400   <span class="text-dark-grey fs-small fw-reg">32px</span></p>
+          <div class="spacing bg-light-grey sp-400" style="height: 42px;"></div>
+        </div>
+        <div class="spacing-container">
+          <p class="text-green fs-body fw-bold">300   <span class="text-dark-grey fs-small fw-reg">24px</span></p>
+          <div class="spacing bg-light-grey sp-300" style="height: 42px;"></div>
+        </div>
+        <div class="spacing-container">
+          <p class="text-green fs-body fw-bold">200   <span class="text-dark-grey fs-small fw-reg">16px</span></p>
+          <div class="spacing bg-light-grey sp-200" style="height: 42px;"></div>
+        </div>
+        <div class="spacing-container">
+          <p class="text-green fs-body fw-bold">150   <span class="text-dark-grey fs-small fw-reg">12px</span></p>
+          <div class="spacing bg-light-grey sp-150" style="height: 42px;"></div>
+        </div>
+        <div class="spacing-container">
+          <p class="text-green fs-body fw-bold">100   <span class="text-dark-grey fs-small fw-reg">8px</span></p>
+          <div class="spacing bg-light-grey sp-100" style="height: 42px;"></div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>

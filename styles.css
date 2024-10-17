@@ -1,0 +1,168 @@
+:root {
+  /* Colors */
+  --clr-primary-light: 148 38% 91%;
+  --clr-primary-medium: 169 82% 27%;
+  --clr-secondary: 0 66% 54%;
+
+  --clr-white: 0 0% 100%;
+  --clr-neutral-light: 186 15% 59%;
+  --clr-neutral-dark: 187 24% 22%;
+
+  /* Spacing */
+  --sp-1600: 128px;
+  --sp-500: 40px;
+  --sp-400: 32px;
+  --sp-300: 24px;
+  --sp-200: 16px;
+  --sp-150: 12px;
+  --sp-100: 8px;
+
+  /* Font Size */
+  --fs-heading: 2rem;
+  --fs-body: 1.125rem;
+  --fs-small: 1rem;
+
+  /* Font Weight */
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  /* Font Family */
+  --ff-total: "Karla", sans-serif;
+
+  /* Border */
+  --border: 1px solid #D3D3D3;
+}
+/* https://piccalil.li/blog/a-more-modern-css-reset/ */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  background: repeating-linear-gradient(
+  to right,
+  #FAFAFA,
+  #FAFAFA 35px,
+  #FFF 30px,
+  #FFF 50px
+);
+  font-family: var(--ff-total);
+  margin: 2em;
+}
+
+.bg-dark-grey { background-color: hsl(var(--clr-neutral-dark)); }
+.bg-light-grey { background-color: hsl(var(--clr-neutral-light)); }
+.bg-white { background-color: hsl(var(--clr-white)); }
+.bg-primary-light { background-color: hsl(var(--clr-primary-light)); }
+.bg-primary-dark { background-color: hsl(var(--clr-primary-medium)); }
+.bg-secondary { background-color: hsl(var(--clr-secondary)); }
+
+.text-green { color: hsl(var(--clr-primary-medium)); }
+.text-dark-grey { color: hsl(var(--clr-neutral-dark)); }
+.text-light-grey { color: hsl(var(--clr-neutral-light)); }
+
+.sp-1600 { width: var(--sp-1600); }
+.sp-500 { width: var(--sp-500); }
+.sp-400 { width: var(--sp-400); }
+.sp-300 { width: var(--sp-300); }
+.sp-200 { width: var(--sp-200); }
+.sp-150 { width: var(--sp-150); }
+.sp-100 { width: var(--sp-100); }
+
+.flex {
+  display: flex;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.bg-white-border {
+  border: var(--border);
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: hsl(var(--clr-neutral-dark) / .15);
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+}
+
+.fs-heading { font-size: var(--fs-heading); }
+.fs-body { font-size: var(--fs-body); }
+.fs-small { font-size: var(--fs-small); }
+
+.fw-reg { font-weight: var(--fw-regular); }
+.fw-bold { font-weight: var(--fw-bold); }
