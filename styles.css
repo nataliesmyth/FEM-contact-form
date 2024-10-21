@@ -129,6 +129,7 @@ body {
 .text-green { color: hsl(var(--clr-primary-medium)); }
 .text-dark-grey { color: hsl(var(--clr-neutral-dark)); }
 .text-light-grey { color: hsl(var(--clr-neutral-light)); }
+.text-white { color: hsl(var(--clr-white)); }
 
 .sp-1600 { width: var(--sp-1600); }
 .sp-500 { width: var(--sp-500); }
@@ -197,6 +198,14 @@ input,
   margin-bottom: 15px;
 }
 
+.hidden {
+  display: none;
+}
+
+.name-input {
+  flex-direction: column;
+}
+
 label {
   font-size: var(--fs-small);
 }
@@ -226,7 +235,15 @@ textarea {
 }
 
 fieldset {
+  margin: 0;
+  padding: 0;
   border: none;
+}
+
+.radio-btn {
+  margin-block: 1em;
+  padding: .25em .75em;
+  height: 51px;
 }
 
 .radio-btn > label {
@@ -239,9 +256,26 @@ input:hover {
   border-color: hsl(var(--clr-primary-medium));
 }
 
+.error-message {
+  color: hsl(var(--clr-secondary));
+}
+
 .attribution {
   font-size: 11px; text-align: center;
   margin-block: 1em;
+}
+
+.modal {
+  border-radius: 12px;
+  padding: 1em;
+}
+
+.modal-title {
+  align-items: center;
+}
+
+.modal-title > p {
+  margin: 0 0 0 .5em;
 }
 
 @media (min-width: 650px) {
