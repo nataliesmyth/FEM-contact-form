@@ -7,7 +7,6 @@ const termsConsent = document.getElementById('consent');
 
 function clearFields() {
   document.querySelectorAll("input").forEach(control => {
-    console.log(control.type)
     if (!["radio", "checkbox"].includes(control.type)) {
       control.value = "";
     } else {
@@ -24,11 +23,9 @@ const validateForm = (e) => {
   const firstName = document.getElementById('firstname');
   const lastName = document.getElementById('lastname');
   const email = document.getElementById('email');
-  console.log(radioBtns[0].checked);
 
   if (firstName.value === '') {
     totalErrors++
-    console.log("Please enter your first name.");
     firstName.style.borderColor = 'hsl(var(--clr-secondary))';
     firstName.nextElementSibling.classList.remove('hidden');
   } else {
@@ -38,7 +35,6 @@ const validateForm = (e) => {
   }
   if (lastName.value === '') {
     totalErrors++
-    console.log("Please enter your last name.");
     lastName.style.borderColor = 'hsl(var(--clr-secondary))';
     lastName.nextElementSibling.classList.remove('hidden');
   } else {
@@ -47,7 +43,6 @@ const validateForm = (e) => {
   }
   if (email.value === '' || !emailIsValid(email.value)) {
     totalErrors++
-    console.log('please enter your email address')
     email.style.borderColor = 'hsl(var(--clr-secondary))';
     email.nextElementSibling.classList.remove('hidden');
   } else {
@@ -56,14 +51,12 @@ const validateForm = (e) => {
 
   }
   if (radioBtns[0].checked !== true && radioBtns[1].checked !== true) {
-    console.log('please select a query type')
     const radioContainer = document.getElementById('radioContainer');
     radioContainer.lastElementChild.classList.remove('hidden');
   } else {
     radioContainer.lastElementChild.classList.add('hidden');
   }
   if (message.value === '') {
-    console.log('please enter a message');
     message.nextElementSibling.classList.remove('hidden');
     message.style.borderColor = 'hsl(var(--clr-secondary))';
   } else {
@@ -83,7 +76,6 @@ const validateForm = (e) => {
   if (totalErrors > 0) {
     return false;
   }
-  console.log('form validated')
   formIsValid()
   return true
 }

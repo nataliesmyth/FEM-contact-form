@@ -108,13 +108,7 @@ textarea:not([rows]) {
 }
 
 body {
-  background: repeating-linear-gradient(
-  to right,
-  #FAFAFA,
-  #FAFAFA 35px,
-  #FFF 30px,
-  #FFF 50px
-);
+  background-color: hsl(var(--clr-primary-light));
   font-family: var(--ff-total);
   margin: 2em;
 }
@@ -225,6 +219,7 @@ input[type='radio']:checked:after {
   padding: .5em 1em;
   color: hsl(var(--clr-neutral-dark));
   max-width: 763px;
+  border-radius: 1rem;
 }
 
 .container > * {
@@ -292,6 +287,10 @@ fieldset {
   top: -9px;
 }
 
+.radio-btn:focus-within {
+  background-color: hsl(var(--clr-primary-light));
+}
+
 input:hover,
 textarea:hover {
   cursor: pointer;
@@ -315,11 +314,17 @@ textarea:hover {
   margin-block: 1em;
 }
 
+.modal-container {
+  position: relative;
+}
+
 .modal {
   position: absolute;
+  left: 20px;
+  right: 20px;
+  margin: 0 auto;
   border-radius: 12px;
   padding: 1em;
-  margin-inline: 1em 3em;
 }
 
 .modal-title {
@@ -363,5 +368,13 @@ textarea:hover {
   .radio-group {
     display: flex;
     gap: 10px;
+  }
+}
+
+@media (min-width: 760px) {
+  .modal {
+    display: block;
+    position: relative;
+    width: 450px;
   }
 }
