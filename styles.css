@@ -345,6 +345,7 @@ textarea:hover {
 
   fieldset {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     gap: 10px;
   }
@@ -357,5 +358,10 @@ textarea:hover {
   .radio-btn:hover {
     cursor: pointer;
     border-color: hsl(var(--clr-primary-medium));
+  }
+
+  .radio-group {
+    display: flex;
+    gap: 10px;
   }
 }

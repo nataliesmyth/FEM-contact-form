@@ -27,6 +27,7 @@ const validateForm = (e) => {
   console.log(radioBtns[0].checked);
 
   if (firstName.value === '') {
+    totalErrors++
     console.log("Please enter your first name.");
     firstName.style.borderColor = 'hsl(var(--clr-secondary))';
     firstName.nextElementSibling.classList.remove('hidden');
@@ -36,6 +37,7 @@ const validateForm = (e) => {
 
   }
   if (lastName.value === '') {
+    totalErrors++
     console.log("Please enter your last name.");
     lastName.style.borderColor = 'hsl(var(--clr-secondary))';
     lastName.nextElementSibling.classList.remove('hidden');
@@ -44,6 +46,7 @@ const validateForm = (e) => {
     lastName.nextElementSibling.classList.add('hidden');
   }
   if (email.value === '' || !emailIsValid(email.value)) {
+    totalErrors++
     console.log('please enter your email address')
     email.style.borderColor = 'hsl(var(--clr-secondary))';
     email.nextElementSibling.classList.remove('hidden');
@@ -68,6 +71,7 @@ const validateForm = (e) => {
     message.style.borderColor = 'hsl(var(--clr-primary-medium))';
   }
   if (termsConsent.checked !== true) {
+    totalErrors++
     termsConsent.parentElement.nextElementSibling.classList.remove('hidden');
     termsConsent.parentElement.lastElementChild.classList.add('flex');
     termsConsent.style.borderColor = 'hsl(var(--clr-secondary))';

@@ -48,8 +48,10 @@
         <fieldset id="radioContainer">
 
           <legend>Query Type<span class="text-green">   *</span></legend>
-          <div class="radio-btn">
-            <input 
+          <div class="radio-group">
+
+            <div class="radio-btn">
+              <input 
               class="radio"
               type="radio"
               name="query-type"
@@ -59,13 +61,14 @@
           </div>
           <div class="radio-btn">
             <input 
-              class="radio"
-              type="radio"
-              name="query-type"
-              id="support-request"
+            class="radio"
+            type="radio"
+            name="query-type"
+            id="support-request"
             >
             <label for="support-request">Support Request</label>
           </div>
+        </div>
           <span id="query-error" class="error-message fs-small hidden">Please select a query type</span>
         </fieldset>
 
