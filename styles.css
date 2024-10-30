@@ -369,12 +369,10 @@ textarea:hover {
     display: flex;
     gap: 10px;
   }
-}
-
-@media (min-width: 760px) {
+  
   .modal {
     display: block;
     position: relative;
     width: 450px;
   }
-}
+};
