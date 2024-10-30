@@ -13,67 +13,80 @@
 </head>
 
 <body class="bg-primary-light">
-  <div class="modal bg-dark-grey text-white">
+
+  <div class="modal bg-dark-grey text-white hidden" id="modal">
     <div class="modal-title flex">
       <span><img class="success-icon" src="./assets/images/icon-success-check.svg" alt=""></span>
       <p class="fw-bold fs-body">Message Sent!</p>
     </div>
     <p class="fw-reg fs-small">Thanks for completing the form. We'll be in touch soon!</p>
   </div>
-  <div class="container bg-white">
-    <h1>Contact Us</h1>
-    <div class="flex name-input">
-      <div>
-        <label for="firstname">First Name<span class="text-green">   *</span></label>
-        <input type="text" id="firstname" name="firstname" autocomplete="firstname" aria-describedby="firstname-instructions" required>
-        <span id="first-name-error" class="error-message"></span>
-      </div>
-      <div>
-        <label for="lastname">Last Name<span class="text-green">   *</span></label>
-        <input type="text" id="lastname" name="lastname" autocomplete="lastname" aria-describedby="lastname-instructions" required>
-        <span class="error-message"></span>
-      </div>
-    </div>
     
-    <label for="email">Email Address</label>
-    <input type="text" id="email" name="email" autocomplete="email" aria-describedby="email-instructions" required>
-    <span class="error-message hidden">Please enter a valid email address</span>
+    <div class="container bg-white">
+      <h1>Contact Us</h1>
+      <form 
+        method="GET"
+        name="contact-form"
+        class="flow"
+        id="form"
+      >
+        <div class="flex name-input">
+          <div>
+            <label for="firstname">First Name<span class="text-green">   *</span></label>
+            <input type="text" id="firstname" name="firstname" autocomplete="firstname" aria-describedby="firstname-instructions" required>
+            <span id="first-name-error" class="error-message fs-small hidden">This field is required</span>
+          </div>
+          <div>
+            <label for="lastname">Last Name<span class="text-green">   *</span></label>
+            <input type="text" id="lastname" name="lastname" autocomplete="lastname" aria-describedby="lastname-instructions" required>
+            <span class="error-message fs-small hidden">This field is required</span>
+          </div>
+        </div>
+        <label for="email">Email Address<span class="text-green">   *</span></label>
+        <input type="text" class="email" id="email" name="email" autocomplete="email" aria-describedby="email-instructions" required>
+        <span class="error-message fs-small hidden">Please enter a valid email address</span>
+        <fieldset id="radioContainer">
 
-    <fieldset>
-      <legend>Query Type<span class="text-green">   *</span></legend>
-      <div class="radio-btn">
-        <input class="radio" type="radio" name="query-type" id="general-enquiry">
-        <label for="general-enquiry">General Enquiry</label><br>
-      </div>
-      <div class="radio-btn">
-        <input class="radio" type="radio" name="query-type" id="support-request">
-        <label for="support-request">Support Request</label>
-      </div>
+          <legend>Query Type<span class="text-green">   *</span></legend>
+          <div class="radio-btn">
+            <input 
+              class="radio"
+              type="radio"
+              name="query-type"
+              id="general-enquiry"
+            >
+            <label for="general-enquiry">General Enquiry</label><br>
+          </div>
+          <div class="radio-btn">
+            <input 
+              class="radio"
+              type="radio"
+              name="query-type"
+              id="support-request"
+            >
+            <label for="support-request">Support Request</label>
+          </div>
+          <span id="query-error" class="error-message fs-small hidden">Please select a query type</span>
+        </fieldset>
 
-      <span id="query-error" class="error-message hidden">Please select a query type</span>
-    </fieldset>
-
-    <label for="message">Message<span class="text-green">   *</span></label>
-    <textarea name="message" id="message"></textarea>
-    <span id="message-error" class="error-message hidden">Please select a query type</span>
-
-    <div class="flex terms">
-      <input class="checkbox" type="checkbox" name="consent" id="consent">
-      <label for="consent">I consent to being contacted by the team<span class="text-green">   *</span>
-      </label>
-      <span id="checkbox-error" class="error-message hidden">To submit this form, please consent to being contacted</span>
-    </div>
-    <button class="btn" id="btn">Submit</button>
+        <label for="message">Message<span class="text-green">   *</span></label>
+        <textarea name="message" id="message"></textarea>
+        <span id="message-error" class="error-message fs-small hidden">This field is required</span>
+        <div class="flex terms">
+          <input 
+            class="checkbox"
+            type="checkbox"
+            name="consent"
+            id="consent" 
+            required
+          >
+          <label for="consent">I hereby consent to being contacted by the team<span class="text-green">   *</span>
+          </label>
+        </div>
+        <div id="checkbox-error" class="checkbox-error error-message fs-small hidden fs-small">To submit this form, please consent to being contacted</div>
+      <button class="btn" id="submit" type="submit">Submit</button>
+    </form>
   </div>
-  
-  <!-- To submit this form, please consent to being contacted -->
-  <!-- 
-  This field is required
-
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon! -->
-  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
