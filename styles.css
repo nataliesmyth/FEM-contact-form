@@ -182,34 +182,6 @@ input {
   accent-color: hsl(var(--clr-primary-medium));
 }
 
-input[type='radio']:after {
-  width: 15px;
-  height: 15px;
-  border-radius: 15px;
-  top: -2px;
-  left: -1px;
-  position: relative;
-  background-color: #d1d3d1;
-  content: '';
-  display: inline-block;
-  visibility: visible;
-  border: 2px solid red;
-}
-
-input[type='radio']:checked:after {
-  width: 15px;
-  height: 15px;
-  border-radius: 15px;
-  top: -2px;
-  left: -1px;
-  position: relative;
-  background-color: #ffa500;
-  content: '';
-  display: inline-block;
-  visibility: visible;
-  border: 2px solid red;
-}
-
 .checkbox {
   background: url(./assets/images/icon-checkbox-check.svg)
 }
