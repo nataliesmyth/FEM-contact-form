@@ -1,6 +1,6 @@
 const form = document.getElementById('form');
 const submitBtn = document.getElementById('submit');
-const modal = document.getElementById('modal');
+const modal = document.getElementById('modal-container');
 const radioBtns = document.querySelectorAll('input[name="query-type"]');
 const message = document.getElementById('message');
 const termsConsent = document.getElementById('consent');
@@ -14,7 +14,6 @@ function clearFields() {
     }
   });
   document.querySelector("textarea").value = "";
-  document.querySelector('[checked]').removeAttribute("checked");
 };
 
 const validateForm = (e) => {
