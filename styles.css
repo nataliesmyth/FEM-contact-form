@@ -159,7 +159,7 @@ body {
 }
 
 .flow > *:where(:not(:first-child)) {
-  margin-top: var(--flow-space, 1rem);
+  margin-block: 1rem;
 }
 
 #firstname,
@@ -233,10 +233,6 @@ input[type='radio']:checked:after {
 .name-input {
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 1em;
-}
-
-.email {
   margin-bottom: 1em;
 }
 
@@ -375,4 +371,4 @@ textarea:hover {
     position: relative;
     width: 450px;
   }
-};
+}
