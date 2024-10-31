@@ -52,6 +52,7 @@ I am happy that I got this project working correctly, but I need to work on refa
 
 - [ARIA Authoring Practices Guide (APG)](https://www.w3.org/TR/wai-aria-practices/examples/radio/radio-1/radio-1.html) - A great resource for best practices for accessibility.
 - [UK Home Office design system](https://design.homeoffice.gov.uk/) - A huge help in overall accessibility practices, and for this project, their approach to ensuring keyboard accessible form controls was extremely valuable.
+- [MDN autocomplete](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete) - Everything you need to know about the autocomplete attribute.
 
 ## Author
 
