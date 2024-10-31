@@ -35,18 +35,18 @@
         <div class="flex name-input">
           <div>
             <label for="firstname">First Name<span class="text-green">   *</span></label>
-            <input type="text" id="firstname" name="firstname" autocomplete="given-name" aria-describedby="firstname-instructions" required>
-            <span id="first-name-error" class="error-message fs-small hidden">This field is required</span>
+            <input type="text" id="firstname" name="firstname" autocomplete="given-name" aria-describedby="firstname-error" required>
+            <span id="firstname-error" class="error-message fs-small hidden">This field is required</span>
           </div>
           <div>
             <label for="lastname">Last Name<span class="text-green">   *</span></label>
-            <input type="text" id="lastname" name="lastname" autocomplete="family-name" aria-describedby="lastname-instructions" required>
-            <span class="error-message fs-small hidden">This field is required</span>
+            <input type="text" id="lastname" name="lastname" autocomplete="family-name" aria-describedby="lastname-error" required>
+            <span id="lastname-error" class="error-message fs-small hidden">This field is required</span>
           </div>
         </div>
         <label for="email">Email Address<span class="text-green">   *</span></label>
-        <input type="text" class="email" id="email" name="email" autocomplete="email" aria-describedby="email-instructions" required>
-        <span class="error-message fs-small hidden">Please enter a valid email address</span>
+        <input type="text" class="email" id="email" name="email" autocomplete="email" aria-describedby="email-error" required>
+        <span id="email-error" class="error-message fs-small hidden">Please enter a valid email address</span>
         <fieldset id="radioContainer">
 
           <legend>Query Type<span class="text-green">   *</span></legend>
@@ -75,14 +75,15 @@
         </fieldset>
 
         <label for="message">Message<span class="text-green">   *</span></label>
-        <textarea name="message" id="message"></textarea>
+        <textarea name="message" id="message" aria-describedby="message-error"></textarea>
         <span id="message-error" class="error-message fs-small hidden">This field is required</span>
         <div class="flex terms">
           <input 
             class="checkbox"
             type="checkbox"
             name="consent"
-            id="consent" 
+            id="consent"
+            aria-describedby="checkbox-error"
             required
           >
           <label for="consent">I hereby consent to being contacted by the team<span class="text-green">   *</span>
@@ -92,9 +93,9 @@
       <button class="btn" id="submit" type="submit">Submit</button>
     </form>
   </main>
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="https://www.nataliesmyth.com">Natalie Smyth</a>.
+  </footer>
 </body>
 </html>
