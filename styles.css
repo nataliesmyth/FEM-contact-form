@@ -107,7 +107,11 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
-body {
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: hsl(var(--clr-primary-light));
   font-family: var(--ff-total);
   margin: 2em;
