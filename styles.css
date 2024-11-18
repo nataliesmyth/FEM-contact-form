@@ -286,15 +286,7 @@ textarea:hover {
   margin-block: 1em;
 }
 
-.modal-container {
-  position: relative;
-}
-
 .modal {
-  position: absolute;
-  left: 20px;
-  right: 20px;
-  margin: 0 auto;
   border-radius: 12px;
   padding: 1em;
 }
